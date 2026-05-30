@@ -1,18 +1,15 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
     domains: [],
   },
   async headers() {
     return [
       {
-        // PWA manifest must be served with correct content-type
         source: "/manifest.webmanifest",
         headers: [{ key: "Content-Type", value: "application/manifest+json" }],
       },
       {
-        // Service worker scope
         source: "/sw.js",
         headers: [
           { key: "Content-Type", value: "application/javascript" },
@@ -23,4 +20,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
