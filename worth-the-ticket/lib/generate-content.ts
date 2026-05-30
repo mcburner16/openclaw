@@ -1,4 +1,4 @@
-import { openai, MODEL } from "./openai";
+import { getOpenAI, MODEL } from "./openai";
 import type { Review, GeneratedContent, TikTokSlide } from "@/types";
 
 function buildSystemPrompt(): string {
@@ -57,7 +57,7 @@ Rules:
 - twitter_post: under 280 chars, punchy, includes verdict
 - podcast_seed: 150-200 word monologue opening for a podcast episode about this movie, casual and engaging`;
 
-  const response = await openai.chat.completions.create({
+  const response = await getOpenAI().chat.completions.create({
     model: MODEL,
     messages: [
       { role: "system", content: system },
@@ -94,7 +94,7 @@ Return ONLY valid JSON:
 
 Each idea should be a short, punchy concept (1-2 sentences). Think hooks, debate starters, opinion pieces, list formats.`;
 
-  const response = await openai.chat.completions.create({
+  const response = await getOpenAI().chat.completions.create({
     model: MODEL,
     messages: [
       { role: "system", content: system },
