@@ -1,0 +1,85 @@
+-- Worth the Ticket? — Seed Data
+-- Run AFTER schema.sql. Inserts 5 example reviews.
+
+insert into reviews (title, year, genre, watch_type, platform, rating, verdict, what_worked, what_didnt_work, theater_notes, spoiler_free, raw_thoughts, posted, watch_date)
+values
+  (
+    'Dune: Part Two',
+    2024,
+    'Sci-Fi',
+    'theater',
+    'IMAX',
+    5.0,
+    'Worth the Ticket',
+    'The scale is unreal. Every frame looks like a painting. Zendaya finally gets to do something and she delivers. The sandworm riding scene had the whole theater losing their minds.',
+    'Could have used more time in the south with the Harkonnens. Some of the political stuff moves fast if you haven''t read the book.',
+    'IMAX was the only way to see this. Packed house, everyone cheering at the end. Pure cinema.',
+    true,
+    'Literally one of the best theater experiences of my life. People were clapping. I was shaking. Denis Villeneuve is untouchable right now.',
+    true,
+    '2024-03-02'
+  ),
+  (
+    'The Substance',
+    2024,
+    'Horror',
+    'theater',
+    'Alamo Drafthouse',
+    4.0,
+    'Worth the Ticket',
+    'Demi Moore is absolutely fearless. The body horror goes places you genuinely don''t expect. It''s saying something real about how we treat women and aging — it just screams it.',
+    'The third act overstays its welcome by about 20 minutes. Once it commits to full chaos mode it loses some of its edge.',
+    'People were covering their eyes. One woman walked out. The crowd energy was wild.',
+    true,
+    'Disgusting and brilliant. Coralie Fargeat goes all in and you have to respect it even when it made me want to look away.',
+    false,
+    '2024-09-20'
+  ),
+  (
+    'Twisters',
+    2024,
+    'Action',
+    'streaming',
+    'Max',
+    3.0,
+    'Stream It',
+    'Glen Powell is doing his thing and it works. The tornado set pieces are genuinely impressive and the practical effects mixed with CGI looks great. It''s just fun.',
+    'The story is basically nonexistent. Every character decision makes zero sense. You''re watching it for the spectacle, not the plot.',
+    null,
+    true,
+    'Exactly what it promises. Turn your brain off, enjoy the chaos. Perfect streaming movie.',
+    true,
+    '2024-10-15'
+  ),
+  (
+    'Madame Web',
+    2024,
+    'Action',
+    'streaming',
+    'Netflix',
+    1.0,
+    'Skip It',
+    'The 2000s aesthetic is so bad it accidentally becomes kind of fascinating.',
+    'Everything else. The dialogue sounds like it was written by someone who has never met a human. The plot is incoherent. The CGI looks unfinished. Dakota Johnson looks like she''s reading off cue cards.',
+    null,
+    true,
+    'I watched it so you don''t have to. Genuinely historic levels of bad. Not even fun bad. Just... sad.',
+    true,
+    '2024-08-03'
+  ),
+  (
+    'A Quiet Place: Day One',
+    2024,
+    'Horror',
+    'theater',
+    'AMC',
+    3.5,
+    'Wait for Sale',
+    'Lupita Nyong''o is incredible and carries the whole movie on her back. The New York setting adds something new to the franchise.',
+    'It feels smaller than the previous films. Doesn''t really expand the mythology in meaningful ways. The ending is a bit flat.',
+    'Good theater crowd — everyone was genuinely tense and quiet, which made the experience better.',
+    true,
+    'Solid but not essential. Worth watching when it hits streaming. Lupita deserved a better script.',
+    false,
+    '2024-06-28'
+  );
