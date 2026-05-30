@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="#0a0a0a"/>
+  <!-- Red accent strip -->
+  <rect x="0" y="220" width="512" height="72" fill="#dc2626" opacity="0.15"/>
+  <!-- Ticket shape -->
+  <rect x="80" y="160" width="352" height="192" rx="16" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Perforation line -->
+  <line x1="80" y1="256" x2="168" y2="256" stroke="#2a2a2a" stroke-width="2" stroke-dasharray="8 6"/>
+  <line x1="344" y1="256" x2="432" y2="256" stroke="#2a2a2a" stroke-width="2" stroke-dasharray="8 6"/>
+  <!-- Left notch -->
+  <circle cx="168" cy="256" r="20" fill="#0a0a0a"/>
+  <!-- Right notch -->
+  <circle cx="344" cy="256" r="20" fill="#0a0a0a"/>
+  <!-- Star -->
+  <text x="256" y="228" text-anchor="middle" font-size="48" fill="#d97706">★</text>
+  <!-- "?" text -->
+  <text x="256" y="306" text-anchor="middle" font-family="Georgia, serif" font-size="48" font-weight="bold" fill="#dc2626">?</text>
+</svg>

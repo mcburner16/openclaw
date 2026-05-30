@@ -30,10 +30,26 @@
 @layer base {
   * {
     @apply border-border;
+    /* Remove iOS tap highlight flash */
+    -webkit-tap-highlight-color: transparent;
+  }
+  html {
+    /* Prevent Safari elastic overscroll from showing white */
+    background-color: #0a0a0a;
+    /* Smooth momentum scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
   }
   body {
     @apply bg-background text-foreground;
     background-color: #0a0a0a;
+    /* Prevent font size inflation on orientation change */
+    -webkit-text-size-adjust: 100%;
+  }
+  /* Prevent iOS zoom on input focus (font-size must be >= 16px) */
+  input,
+  textarea,
+  select {
+    font-size: 16px;
   }
 
   ::-webkit-scrollbar {

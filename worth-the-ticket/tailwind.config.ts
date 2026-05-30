@@ -97,7 +97,20 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    // Safe-area inset utilities for iOS notch / Dynamic Island / home indicator
+    function ({ addUtilities }: { addUtilities: (u: Record<string, Record<string, string>>) => void }) {
+      addUtilities({
+        ".h-safe-top": { height: "env(safe-area-inset-top)" },
+        ".h-safe-bottom": { height: "env(safe-area-inset-bottom)" },
+        ".pb-safe-bottom": { paddingBottom: "env(safe-area-inset-bottom)" },
+        ".pt-safe-top": { paddingTop: "env(safe-area-inset-top)" },
+        ".mb-safe-bottom": { marginBottom: "env(safe-area-inset-bottom)" },
+        ".min-touch": { minHeight: "44px", minWidth: "44px" },
+      });
+    },
+  ],
 };
 
 export default config;
