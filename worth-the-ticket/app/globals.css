@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 72% 51%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 5%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 0 72% 51%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-color: #0a0a0a;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #141414;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a2a;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #dc2626;
+  }
+}
+
+@layer utilities {
+  .text-cinema-red {
+    color: #dc2626;
+  }
+  .text-cinema-gold {
+    color: #d97706;
+  }
+  .bg-cinema-surface {
+    background-color: #141414;
+  }
+  .bg-cinema-elevated {
+    background-color: #1e1e1e;
+  }
+  .border-cinema {
+    border-color: #2a2a2a;
+  }
+
+  .ticket-notch {
+    position: relative;
+  }
+  .ticket-notch::before,
+  .ticket-notch::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #0a0a0a;
+    border: 1px solid #2a2a2a;
+  }
+  .ticket-notch::before {
+    left: -6px;
+  }
+  .ticket-notch::after {
+    right: -6px;
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, #d97706, #f59e0b, #d97706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .red-gradient {
+    background: linear-gradient(135deg, #dc2626, #ef4444, #dc2626);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cinema-card {
+    @apply bg-[#141414] border border-[#2a2a2a] rounded-lg;
+  }
+
+  .cinema-input {
+    @apply bg-[#1e1e1e] border border-[#2a2a2a] rounded-md text-white placeholder-gray-600 focus:border-red-600 focus:ring-1 focus:ring-red-600 transition-colors;
+  }
+}
+
+/* Rating star styles */
+.star-rating {
+  display: flex;
+  gap: 4px;
+}
+.star-rating button {
+  transition: transform 0.1s;
+}
+.star-rating button:hover {
+  transform: scale(1.2);
+}
+
+/* Shimmer loading */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    #1e1e1e 25%,
+    #2a2a2a 50%,
+    #1e1e1e 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s linear infinite;
+}
