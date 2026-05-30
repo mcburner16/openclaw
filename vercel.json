@@ -1,7 +1,0 @@
-{
-  "framework": "nextjs",
-  "buildCommand": "cd worth-the-ticket && npm install && npm run build",
-  "outputDirectory": "worth-the-ticket/.next",
-  "installCommand": "cd worth-the-ticket && npm install",
-  "devCommand": "cd worth-the-ticket && npm run dev"
-}
