@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Disable static prerendering — all pages render at request time
+  // This avoids Recharts and Supabase client errors during build
+  output: undefined,
   images: {
     domains: [],
   },
